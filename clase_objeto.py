@@ -1,6 +1,4 @@
 # Crear clase y atributos, constructor, y método de clasificación
-# Autor: Fernando Manzo Virgen
-# Fecha: 20/02/2019
 
 class Persona:
     def __init__(self, nombre, edad, sexo, peso, altura):
