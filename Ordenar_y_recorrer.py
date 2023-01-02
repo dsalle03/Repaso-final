@@ -46,7 +46,6 @@ def merge_sort(array: list) -> list:
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-
     from random import shuffle
     array = ["a", "c", "d", "b"]
     shuffle(array)
