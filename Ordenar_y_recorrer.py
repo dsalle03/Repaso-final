@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-
 def merge(left_half: list, right_half: list) -> list:
 
     sorted_array = [None] * (len(right_half) + len(left_half))
@@ -42,12 +41,11 @@ def merge_sort(array: list) -> list:
 
     return merge(merge_sort(left_half), merge_sort(right_half))
 
-
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
     from random import shuffle
-    array = ["a", "c", "d", "b"]
+    array = ["d", "c", "a", "b"]
     shuffle(array)
     y = (merge_sort(array))
     for x in y:

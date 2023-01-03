@@ -1,55 +1,271 @@
-# Grafo a cíclico no dirigido (postman)
+# Grafo postman
 
-from __future__ import annotations
+class Grafo:
+    def __init__(self):
+        self.vertices = {}
+        self.aristas = {}
+        self.vecinos = {}
+        self.grado = {}
+        self.adyacentes = {}
+        self.peso = {}
+        self.visitados = {}
+        self.camino = []
+        self.ciclo = []
+        self.ciclos = []
+        self.ciclos2 = []
+        self.ciclos3 = []
+        self.ciclos4 = []
+        self.ciclos5 = []
+        self.ciclos6 = []
+        self.ciclos7 = []
+        self.ciclos8 = []
+        self.ciclos9 = []
+        self.ciclos10 = []
+        self.ciclos11 = []
+        self.ciclos12 = []
+        self.ciclos13 = []
+        self.ciclos14 = []
+        self.ciclos15 = []
 
+    def agregar_vertice(self, v):
+        if v not in self.vertices:
+            self.vertices[v] = v
+            self.vecinos[v] = []
+            self.grado[v] = 0
+            self.adyacentes[v] = []
+            self.peso[v] = {}
+            self.visitados[v] = False
 
-def merge(left_half: list, right_half: list) -> list:
+    def agregar_arista(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista2(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista3(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista4(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista5(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista6(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista7(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista8(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista9(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista10(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista11(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista12(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista13(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista14(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
+    def agregar_arista15(self, u, v, peso=1):
+        if u in self.vertices and v in self.vertices:
+            if v not in self.vecinos[u] and u not in self.vecinos[v]:
+                self.aristas[(u, v)] = (u, v)
+                self.vecinos[u].append(v)
+                self.vecinos[v].append(u)
+                self.grado[u] += 1
+                self.grado[v] += 1
+                self.adyacentes[u].append(v)
+                self.adyacentes[v].append(u)
+                self.peso[u][v] = peso
+                self.peso[v][u] = peso
+    
 
-    sorted_array = [None] * (len(right_half) + len(left_half))
+def main():
+    g = Grafo()
+    g.agregar_vertice(1)
+    g.agregar_vertice(2)
+    g.agregar_vertice(3)
+    g.agregar_vertice(4)
+    g.agregar_vertice(5)
+    g.agregar_vertice(6)
+    g.agregar_vertice(7)
+    g.agregar_vertice(8)
+    g.agregar_vertice(9)
+    g.agregar_vertice(10)
+    g.agregar_vertice(11)
+    g.agregar_vertice(12)
+    g.agregar_vertice(13)
+    g.agregar_vertice(14)
+    g.agregar_vertice(15)
+    g.agregar_arista(1, 2)
+    g.agregar_arista2(1, 3)
+    g.agregar_arista3(1, 4)
+    g.agregar_arista4(1, 5)
+    g.agregar_arista5(1, 6)
+    g.agregar_arista6(1, 7)
+    g.agregar_arista7(1, 8)
+    g.agregar_arista8(1, 9)
+    g.agregar_arista9(1, 10)
+    g.agregar_arista10(1, 11)
+    g.agregar_arista11(1, 12)
+    g.agregar_arista12(1, 13)
+    g.agregar_arista13(1, 14)
+    g.agregar_arista14(1, 15)
+    g.agregar_arista15(2, 3)
+    return g
 
-    pointer1 = 0
-    pointer2 = 0
-    index = 0
+main()
 
-    while pointer1 < len(left_half) and pointer2 < len(right_half):
-        if left_half[pointer1] < right_half[pointer2]:
-            sorted_array[index] = left_half[pointer1]
-            pointer1 += 1
-            index += 1
-        else:
-            sorted_array[index] = right_half[pointer2]
-            pointer2 += 1
-            index += 1
-    while pointer1 < len(left_half):
-        sorted_array[index] = left_half[pointer1]
-        pointer1 += 1
-        index += 1
-
-    while pointer2 < len(right_half):
-        sorted_array[index] = right_half[pointer2]
-        pointer2 += 1
-        index += 1
-
-    return sorted_array
-
-def merge_sort(array: list) -> list:
-
-    if len(array) <= 1:
-        return array
-    middle = 0 + (len(array) - 0) // 2
-
-    left_half = array[:middle]
-    right_half = array[middle:]
-
-    return merge(merge_sort(left_half), merge_sort(right_half))
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
-    from random import shuffle
-    array = ["a", "c", "d", "b"]
-    shuffle(array)
-    y = (merge_sort(array))
-    for x in y:
-        print(x)
 
