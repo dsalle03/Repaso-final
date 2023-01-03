@@ -31,6 +31,3 @@ def voraz(conjunto_candidatos):
                 return False
 
 
-    monedas = [0.01, 0.05, 0.1, 0.25, 0.5, 1, 2]
-    vuelto = cambio(monedas, 3,81)
-    print(vuelto)
