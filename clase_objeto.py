@@ -20,6 +20,6 @@ class persona:
             return "Obesidad"
         
 
-yo = persona("David", 19, "Hombre", 64, 1.76)
+yo = persona("David", 19, "Hombre", 62, 1.84)
 
 print(yo.clasificacion())
