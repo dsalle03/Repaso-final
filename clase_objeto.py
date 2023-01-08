@@ -1,5 +1,3 @@
-# Crear clase y atributos, constructor, y método de clasificación
-
 class persona:
     def __init__(self, nombre, edad, sexo, peso, altura):
         self.nombre = nombre
