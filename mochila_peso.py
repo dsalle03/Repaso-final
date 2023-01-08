@@ -22,14 +22,18 @@ def mochila(objetos, capacidad):
     return solucion, matriz[n][capacidad], peso_total
 
 objetos = [
-    (1, 10, "Libro"),
-    (1, 25, "Móvil"),
-    (1, 30, "Ordenador"),
+    (1, 800, "Alargador"),
+    (1, 100, "Cable USB"),
+    (1, 200, "Cargador"),
+    (1, 300, "Movil"),
+    (1, 3500, "Portatil")
 ]
 
-peso_maximo = 60
+
+peso_maximo = 4500
 
 solucion, valor, peso = mochila(objetos, peso_maximo)
+peso = peso / 1000
 
 print(f"La cantidad máxima de objetos que puede llevar en la mochila es {valor}")
 print(f"Los objetos elegidos son {solucion}")
