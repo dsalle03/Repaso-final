@@ -59,7 +59,7 @@ def decode_text(tree, text):
 
 
 # Cadena de texto
-text = "Hola, mundo!"
+text = "Obi-Wan eres nuestra unica esperanza"
 
 # Contar la frecuencia de cada carácter
 counter = Counter(text)
